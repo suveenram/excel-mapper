@@ -1,0 +1,12 @@
+# Render.com Blueprint: Backend API deployment
+# Usage: click 'New Web Service', select this YAML or supply repo, and Render will auto-configure.
+services:
+  - type: web
+    name: excel-mapper-api
+    env: node
+    repo: https://github.com/suveenram/excel-mapper.git  # <--- EDIT THIS FOR YOUR REPO
+    branch: main
+    buildCommand: npm install
+    startCommand: npm run start
+    rootDir: backend
+    autoDeploy: true
